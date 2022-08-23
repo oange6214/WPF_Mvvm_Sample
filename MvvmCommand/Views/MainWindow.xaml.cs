@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MvvmCommand
+namespace MvvmSample
 {
     public partial class MainWindow : Window
     {

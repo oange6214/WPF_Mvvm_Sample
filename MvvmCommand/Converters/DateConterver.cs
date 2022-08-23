@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace MvvmCommand.Converters
+namespace MvvmSample.Converters
 {
     public class DateConterver : IValueConverter
     {

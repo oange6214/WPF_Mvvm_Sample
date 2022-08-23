@@ -1,6 +1,6 @@
-﻿using MvvmCommand.Base;
-using MvvmCommand.Command;
-using MvvmCommand.Models;
+﻿using MvvmSample.Base;
+using MvvmSample.Command;
+using MvvmSample.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace MvvmCommand.ViewModels
+namespace MvvmSample.ViewModels
 {
     public class PersonViewModel : INotifyPropertyChanged
     {
