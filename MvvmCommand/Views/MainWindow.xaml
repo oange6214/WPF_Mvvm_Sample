@@ -2,6 +2,7 @@
     x:Class="MvvmCommand.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converter="clr-namespace:MvvmCommand.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MvvmCommand"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -13,6 +14,15 @@
 
     <Window.Resources>
         <vm:PersonViewModel x:Key="PersonViewModel" />
+        <converter:DateConterver x:Key="DateConterver" />
+
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Grid Margin="5" DataContext="{Binding Source={StaticResource PersonViewModel}}">
@@ -55,14 +65,14 @@
             Grid.Column="1"
             Width="100"
             HorizontalAlignment="Center"
-            Text="{Binding Person.FName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            Text="{Binding Person.FName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
 
         <TextBox
             Grid.Row="1"
             Grid.Column="1"
             Width="100"
             HorizontalAlignment="Center"
-            Text="{Binding Person.LName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            Text="{Binding Person.LName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
 
         <!--  Botton  -->
         <ListView
@@ -84,6 +94,10 @@
                         Width="auto"
                         DisplayMemberBinding="{Binding FullName}"
                         Header="Full Name" />
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding DateAdded, Converter={StaticResource DateConterver}}"
+                        Header="Date Added" />
                 </GridView>
             </ListView.View>
         </ListView>

@@ -1,8 +1,10 @@
 ﻿using MvvmCommand.Base;
+using System;
+using System.ComponentModel;
 
 namespace MvvmCommand.Models
 {
-    public class Person : NotifyBase
+    public class Person : NotifyBase, IDataErrorInfo
     {
         private string _fName;
 
@@ -22,7 +24,6 @@ namespace MvvmCommand.Models
 
         private string _fullName;
 
-
         public string FullName
         {
             get { return _fullName = FName + " " + LName; }
@@ -34,5 +35,32 @@ namespace MvvmCommand.Models
                 }
             }
         }
+
+        public DateTime DateAdded { get; set; }
+
+        // IDataErrorInfo
+        public string this[string propertyName]
+        {
+            get
+            {
+                string result = string.Empty;
+
+                switch (propertyName)
+                {
+                    case "FName":
+                        if (string.IsNullOrEmpty(FName))
+                            result = "First Name is required!";
+                        break;
+                    case "LName":
+                        if (string.IsNullOrEmpty(FName))
+                            result = "Last Name is required!";
+                        break;
+                }
+
+                return result;
+            }
+        }
+
+        public string Error => null;
     }
 }
