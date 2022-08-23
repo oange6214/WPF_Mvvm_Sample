@@ -1,18 +1,12 @@
-﻿using MvvmSample.Base;
-using MvvmSample.Command;
-using MvvmSample.Models;
-using System;
-using System.Collections.Generic;
+﻿using MvvmDemo.Command;
+using MvvmDemo.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace MvvmSample.ViewModels
+namespace MvvmDemo.ViewModels
 {
     public class PersonViewModel : INotifyPropertyChanged
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace MvvmSample.Base
+namespace MvvmDemo.Base
 {
     public class NotifyBase : INotifyPropertyChanged
     {

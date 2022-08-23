@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="MvvmDemo.UserControls.ListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converter="clr-namespace:MvvmDemo.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MvvmDemo.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <converter:DateConterver x:Key="DateConterver" />
+    </UserControl.Resources>
+
+    <Grid>
+        <ListView
+            Grid.Row="3"
+            Grid.Column="1"
+            Width="auto"
+            ItemsSource="{Binding Persons}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding FName}"
+                        Header="First Name" />
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding LName}"
+                        Header="Last Name" />
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding FullName}"
+                        Header="Full Name" />
+                    <GridViewColumn
+                        Width="auto"
+                        DisplayMemberBinding="{Binding DateAdded, Converter={StaticResource DateConterver}}"
+                        Header="Date Added" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

@@ -1,8 +1,8 @@
-﻿using MvvmSample.Base;
+﻿using MvvmDemo.Base;
 using System;
 using System.ComponentModel;
 
-namespace MvvmSample.Models
+namespace MvvmDemo.Models
 {
     public class Person : NotifyBase, IDataErrorInfo
     {
