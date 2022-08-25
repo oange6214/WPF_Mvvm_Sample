@@ -5,7 +5,11 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvvmDemo", "MvvmCommand\MvvmDemo.csproj", "{78F23483-D0CE-4153-B6AA-3B9E7154A98C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedPropertiesDemo", "AttachedPropertiesDemo\AttachedPropertiesDemo.csproj", "{A63DA5C2-DA12-4020-8580-B5E2CF6B6F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttachedPropertiesDemo", "AttachedPropertiesDemo\AttachedPropertiesDemo.csproj", "{A63DA5C2-DA12-4020-8580-B5E2CF6B6F5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListVsObservable", "ListVsObservable\ListVsObservable.csproj", "{6C50D4FF-B2C4-4D8B-9EF9-B2DCF20C8878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDataGrid", "WPFDataGrid\WPFDataGrid.csproj", "{794D02DD-CDE6-48FB-AF1F-65C071E7471C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A63DA5C2-DA12-4020-8580-B5E2CF6B6F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63DA5C2-DA12-4020-8580-B5E2CF6B6F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63DA5C2-DA12-4020-8580-B5E2CF6B6F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C50D4FF-B2C4-4D8B-9EF9-B2DCF20C8878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C50D4FF-B2C4-4D8B-9EF9-B2DCF20C8878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C50D4FF-B2C4-4D8B-9EF9-B2DCF20C8878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C50D4FF-B2C4-4D8B-9EF9-B2DCF20C8878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794D02DD-CDE6-48FB-AF1F-65C071E7471C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794D02DD-CDE6-48FB-AF1F-65C071E7471C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794D02DD-CDE6-48FB-AF1F-65C071E7471C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794D02DD-CDE6-48FB-AF1F-65C071E7471C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
